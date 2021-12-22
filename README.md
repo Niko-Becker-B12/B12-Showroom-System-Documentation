@@ -27,13 +27,7 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 ## UML diagrams
 
 ```mermaid
-%%{init: {'theme': 'base',
-
-'themeVariables': { 'primaryColor': '#333333',
-
-'darkMode' : 'true',
-
-'defaultLinkColor' : '#000000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#333333', 'darkMode' : 'true', 'defaultLinkColor' : '#000000'}}}%%
 
   
 
