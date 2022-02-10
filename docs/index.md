@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# B12 Showroom System
 
-You can use the [editor on GitHub](https://github.com/Niko-Becker-B12/B12-Showroom-System/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the B12 Showroom System Documentation!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The currently online and useable Version is **3.5.5**!
 
-### Markdown
+## Showroom System Architecture
+![](https://raw.githubusercontent.com/Niko-Becker-B12/B12-Showroom-System/6603e173622addeb0aa187db13d035104640565e/Documentation%7E/com.b12.showroom.systemArchitecture.svg)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Showroom Manager
 
-# Header 1
-## Header 2
-### Header 3
+## Main User Interface
 
-- Bulleted
-- List
+## $Headline3
 
-1. Numbered
-2. List
+## $Headline4
 
-**Bold** and _Italic_ and `Code` text
+## $Headline5
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## SmartyPants
 
-### Jekyll Themes
+SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Niko-Becker-B12/B12-Showroom-System/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
-### Support or Contact
+## UML diagrams
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+![](https://raw.githubusercontent.com/Niko-Becker-B12/B12-Showroom-System/6603e173622addeb0aa187db13d035104640565e/Documentation%7E/com.b12.showroom.systemArchitecture.svg)
+
