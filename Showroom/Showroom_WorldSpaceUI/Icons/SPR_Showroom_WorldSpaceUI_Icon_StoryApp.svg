@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="a627cd07-2653-41b4-b459-956f0b122c36"
+   x="0px"
+   y="0px"
+   viewBox="0 0 40 40"
+   style="enable-background:new 0 0 40 40;"
+   xml:space="preserve"
+   sodipodi:docname="StoryApp_Icon_BL.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
+   id="metadata11"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs9" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3840"
+   inkscape:window-height="2066"
+   id="namedview7"
+   showgrid="false"
+   inkscape:zoom="25.2"
+   inkscape:cx="20"
+   inkscape:cy="20"
+   inkscape:window-x="-11"
+   inkscape:window-y="-11"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="a627cd07-2653-41b4-b459-956f0b122c36" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:none;}
+</style>
+<path
+   class="st0"
+   d="M37.8,5.9H2.2C1,5.9,0,6.9,0,8.2v21.1c0,1.2,1,2.2,2.2,2.2h35.6c1.2,0,2.2-1,2.2-2.2V8.2  C40,6.9,39,5.9,37.8,5.9z M5,28.2c-0.9,0-1.7-0.7-1.7-1.7c0-0.9,0.7-1.7,1.7-1.7s1.7,0.7,1.7,1.7C6.7,27.4,5.9,28.2,5,28.2z   M10.7,28.2c-0.9,0-1.7-0.7-1.7-1.7c0-0.9,0.7-1.7,1.7-1.7c0.9,0,1.7,0.7,1.7,1.7C12.3,27.4,11.6,28.2,10.7,28.2z"
+   id="path4"
+   style="fill:#ffffff" />
+</svg>

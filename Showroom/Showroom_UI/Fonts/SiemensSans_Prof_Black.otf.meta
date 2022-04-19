@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 77fafe91ea123934dbd092e199e06b3b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Siemens Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d060200c4b5f10c4a9371ff4a1ab4650, type: 3}
+  - {fileID: 12800000, guid: e4802749921d7f84e9289ae0dc7647fc, type: 3}
+  - {fileID: 12800000, guid: 28b7cae1e719fd74cb4c439ae36facaa, type: 3}
+  - {fileID: 12800000, guid: 4d383154d7a677340af078dad43c6caa, type: 3}
+  - {fileID: 12800000, guid: b4d2b3a18693d1045b5df6b6964fab99, type: 3}
+  - {fileID: 12800000, guid: 52d3df3b18baeee4c9fd74062f3f2515, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

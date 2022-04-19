@@ -1,0 +1,14 @@
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M4.24,47.06h39.3V14.94H4.24Zm4.15-28h31V42.91h-31Z"/>
+    <polygon class="cls-1" points="46.64 24.58 46.64 37.42 57.76 43.84 57.76 31 57.76 18.16 46.64 24.58"/>
+    <polygon class="cls-1" points="15.92 21.93 15.92 31 15.92 40.07 24.69 35.54 33.47 31 24.69 26.46 15.92 21.93"/>
+  </g>
+</svg>
