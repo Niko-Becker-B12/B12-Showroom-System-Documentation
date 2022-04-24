@@ -199,7 +199,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &61885568347869466
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +398,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &107921932950593326
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +744,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &328590567961209744
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +943,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &554108646779086192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1249,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &873336143487207845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,12 +1638,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 376996789137349804}
+          m_TargetAssemblyTypeName: Showroom.ShowroomUI, Assembly-CSharp
+          m_MethodName: MoveCloseButtonOntoScreen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     functionDelay: 0
   onMouseExit: []
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &1239610663446133781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,12 +2206,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 376996789137349804}
+          m_TargetAssemblyTypeName: Showroom.ShowroomUI, Assembly-CSharp
+          m_MethodName: MoveCloseButtonOffScreen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     functionDelay: 0
   onMouseExit: []
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &1576129143194211312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2872,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &1747950743240088344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3275,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &2151316113418433036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,7 +3671,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &2401891629669699255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,7 +5208,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &3725036649242527937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,7 +6111,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &4580730458260520150
 GameObject:
   m_ObjectHideFlags: 0
@@ -7677,7 +7689,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &7975042539740772532
 GameObject:
   m_ObjectHideFlags: 0
@@ -8048,7 +8059,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &8274394897023926868
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,7 +8252,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &8341386957059979490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8929,7 +8938,6 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
-  exceptionCase: 0
 --- !u!1 &9135626224141970529
 GameObject:
   m_ObjectHideFlags: 0

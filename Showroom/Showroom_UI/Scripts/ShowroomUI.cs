@@ -1854,7 +1854,10 @@ namespace Showroom
 
                 if (showroomManager.useCases[showroomManager.useCaseIndex].hasTimelineStepper)
                 {
-                    OpenTimelineStepper();
+                    if (!timelineStepperIsOpen)
+                        OpenTimelineStepper();
+                    else
+                        ScaleTimelineStepperUp();
 
                     removeGeneralMenu = false;
                 }
@@ -1865,7 +1868,10 @@ namespace Showroom
 
                 if (showroomManager.hasTimelineStepper)
                 {
-                    OpenTimelineStepper();
+                    if (!timelineStepperIsOpen)
+                        OpenTimelineStepper();
+                    else
+                        ScaleTimelineStepperUp();
 
                     removeGeneralMenu = false;
                 }
@@ -1887,7 +1893,7 @@ namespace Showroom
             FadeCanvasGroupOut(burgerButtonOutsideCanvasGroup);
 
             if (timelineStepperIsOpen)
-                CloseTimelineStepper();
+                ScaleTimelineStepperDown();
 
             MoveGeneralMenuOntoScreen();
 
@@ -2199,6 +2205,52 @@ namespace Showroom
         {
 
             timelineStepperRect.DOAnchorPos(timelineStepperClosedPos, .5f).OnComplete(() => timelineStepperIsOpen = false);
+
+        }
+
+        public void ScaleTimelineStepperUp()
+        {
+
+            float spacing = 74;
+
+            DOTween.To(() => spacing, x => spacing = x, 216, 1).OnUpdate(() =>
+            {
+
+                timelineStepperParent.gameObject.GetComponent<HorizontalLayoutGroup>().spacing = spacing;
+
+            });
+
+            timelineStepperRect.DOSizeDelta(new Vector2(1380f, 156f), .5f);
+
+            for (int i = 0; i < spawnedStepperButtons.Count; i++)
+            {
+
+                spawnedStepperButtons[i].transform.GetChild(1).GetComponent<CanvasGroup>().DOFade(1f, .5f);
+
+            }
+
+        }
+
+        public void ScaleTimelineStepperDown()
+        {
+
+            float spacing = 216;
+
+            DOTween.To(() => spacing, x => spacing = x, 74, 1).OnUpdate(() =>
+            {
+
+                timelineStepperParent.gameObject.GetComponent<HorizontalLayoutGroup>().spacing = spacing;
+
+            });
+
+            timelineStepperRect.DOSizeDelta(new Vector2(750f, 156f), .5f);
+
+            for (int i = 0; i < spawnedStepperButtons.Count; i++)
+            {
+
+                spawnedStepperButtons[i].transform.GetChild(1).GetComponent<CanvasGroup>().DOFade(0f, .5f);
+
+            }
 
         }
 
