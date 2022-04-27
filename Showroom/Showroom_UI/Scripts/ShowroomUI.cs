@@ -15,109 +15,113 @@ namespace Showroom
 
     public class ShowroomUI : MonoBehaviour
     {
-        [BoxGroup("Showroom Manager")] [SerializeField] private ShowroomManager showroomManager;
+        [BoxGroup("Showroom Manager")][SerializeField] private ShowroomManager showroomManager;
 
-        [BoxGroup("Scale Settings")] [Tooltip("Value is given in Diagonal-Inch")] [SerializeField] float screenScaleValue;
-        [BoxGroup("Scale Settings")] [SerializeField] CanvasScaler showroomUICanvasScaler;
-        [BoxGroup("Scale Settings")] [SerializeField] AnimationCurve scaleFactor;
-        [BoxGroup("Scale Settings")] [SerializeField] Vector2 currentResolution;
+        [BoxGroup("Scale Settings")][Tooltip("Value is given in Diagonal-Inch")][SerializeField] float screenScaleValue;
+        [BoxGroup("Scale Settings")][SerializeField] CanvasScaler showroomUICanvasScaler;
+        [BoxGroup("Scale Settings")][SerializeField] AnimationCurve scaleFactor;
+        [BoxGroup("Scale Settings")][SerializeField] Vector2 currentResolution;
 
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform sidebarRect;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform sidebarParentRect;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform closeButtonRect;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform burgerButtonHeaderRect;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform burgerButtonOutsideRect;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private CanvasGroup burgerButtonOutsideCanvasGroup;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private Vector2 sidebarOpenSize = new Vector2(450f, 220f);
-        [BoxGroup("Sidebar Settings")] [SerializeField] private Vector2 sidebarClosedSize = new Vector2(450f, 0f);
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform sidebarRect;
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform sidebarParentRect;
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform closeButtonRect;
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform burgerButtonHeaderRect;
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform burgerButtonOutsideRect;
+        [BoxGroup("Sidebar Settings")][SerializeField] private CanvasGroup burgerButtonOutsideCanvasGroup;
+        //[BoxGroup("Sidebar Settings")][SerializeField] private Vector2 sidebarOpenSize = new Vector2(450f, 220f);
+        [BoxGroup("Sidebar Settings")][SerializeField] private Vector2 sidebarOpenPos = new Vector2(145f, -172f);
+        [BoxGroup("Sidebar Settings")][SerializeField] private Vector2 sidebarClosePos = new Vector2(-845f, -172f);
         [BoxGroup("Sidebar Settings")] private bool sidebarIsOpen = false;
 
-        [BoxGroup("Sidebar Settings")] [SerializeField] private GameObject sidebarButtonPrefab;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private RectTransform sidebarButtonParent;
+        [BoxGroup("Sidebar Settings")][SerializeField] private GameObject sidebarButtonPrefab;
+        [BoxGroup("Sidebar Settings")][SerializeField] private RectTransform sidebarButtonParent;
 
-        [BoxGroup("Sidebar Settings")] [SerializeField] private TextMeshProUGUI titleText;
-        [BoxGroup("Sidebar Settings")] [SerializeField] private TextMeshProUGUI subTitleText;
+        [BoxGroup("Sidebar Settings")][SerializeField] private TextMeshProUGUI titleText;
+        [BoxGroup("Sidebar Settings")][SerializeField] private TextMeshProUGUI subTitleText;
 
+        [BoxGroup("Sidebar Settings")][SerializeField] private Vector2 closeButtonOnScreenPos = new Vector2(145f, -172f);
+        [BoxGroup("Sidebar Settings")][SerializeField] private Vector2 closeButtonOffScreenPos = new Vector2(-845f, -172f);
 
-        [BoxGroup("General Menu Settings")] [SerializeField] private RectTransform generalMenuRect;
-        [BoxGroup("General Menu Settings")] [SerializeField] private CanvasGroup generalMenuCanvasGroup;
-        [BoxGroup("General Menu Settings")] [SerializeField] private Vector2 generalMenuOpenPos = new Vector2(0f, 72f);
-        [BoxGroup("General Menu Settings")] [SerializeField] private Vector2 generalMenuClosedPos = new Vector2(0f, -72f);
+        [BoxGroup("General Menu Settings")][SerializeField] private RectTransform generalMenuRect;
+        [BoxGroup("General Menu Settings")][SerializeField] private CanvasGroup generalMenuCanvasGroup;
+        [BoxGroup("General Menu Settings")][SerializeField] private Vector2 generalMenuOpenPos = new Vector2(0f, 72f);
+        [BoxGroup("General Menu Settings")][SerializeField] private Vector2 generalMenuClosedPos = new Vector2(0f, -72f);
         [BoxGroup("General Menu Settings")] private bool generalMenuIsOpen = false;
 
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuPlayButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuReplayButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuPauseButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuHomeCamButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuSubLevelHomeCamButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuTransparencyButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public Sprite[] tranparencyButtons;
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuCameraPosButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public TextMeshProUGUI generalMenuCameraPosButtonText;
-        [BoxGroup("General Menu Settings")] [SerializeField] public Transform generalMenuCameraPosDropdown;
-        [BoxGroup("General Menu Settings")] [SerializeField] public Transform generalMenuCameraPosDropdownButtonParent;
-        [BoxGroup("General Menu Settings")] [SerializeField] public GameObject generalMenuCameraPosButtonPrefab;
-        [BoxGroup("General Menu Settings")] [SerializeField] public Sprite[] generalMenuCameraPosButtonSprites;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuPlayButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuReplayButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuPauseButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuHomeCamButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuSubLevelHomeCamButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuTransparencyButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public Sprite[] tranparencyButtons;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuCameraPosButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public TextMeshProUGUI generalMenuCameraPosButtonText;
+        [BoxGroup("General Menu Settings")][SerializeField] public Transform generalMenuCameraPosDropdown;
+        [BoxGroup("General Menu Settings")][SerializeField] public Transform generalMenuCameraPosDropdownButtonParent;
+        [BoxGroup("General Menu Settings")][SerializeField] public GameObject generalMenuCameraPosButtonPrefab;
+        [BoxGroup("General Menu Settings")][SerializeField] public Sprite[] generalMenuCameraPosButtonSprites;
         [BoxGroup("General Menu Settings")] public List<ButtonBehavior> generalMenuCameraPosButtons = new List<ButtonBehavior>();
-        [BoxGroup("General Menu Settings")] [SerializeField] public ButtonBehavior generalMenuDragModeButton;
-        [BoxGroup("General Menu Settings")] [SerializeField] public Sprite[] dragModeButtons;
+        [BoxGroup("General Menu Settings")][SerializeField] public ButtonBehavior generalMenuDragModeButton;
+        [BoxGroup("General Menu Settings")][SerializeField] public Sprite[] dragModeButtons;
 
         private bool onlyOneGeneralMenuButtonActive = false;
 
-        [BoxGroup("Right Menu Settings")] [SerializeField] private RectTransform rightMenuRect;
-        [BoxGroup("Right Menu Settings")] [SerializeField] private CanvasGroup rightMenuCanvasGroup;
-        [BoxGroup("Right Menu Settings")] [SerializeField] private Vector2 rightMenuOpenPos = new Vector2(0f, 72f);
-        [BoxGroup("Right Menu Settings")] [SerializeField] private Vector2 rightMenuClosedPos = new Vector2(0f, -72f);
+        [BoxGroup("Right Menu Settings")][SerializeField] private RectTransform rightMenuRect;
+        [BoxGroup("Right Menu Settings")][SerializeField] private CanvasGroup rightMenuCanvasGroup;
+        [BoxGroup("Right Menu Settings")][SerializeField] private Vector2 rightMenuOpenPos = new Vector2(0f, 72f);
+        [BoxGroup("Right Menu Settings")][SerializeField] private Vector2 rightMenuClosedPos = new Vector2(0f, -72f);
         [BoxGroup("Right Menu Settings")] private bool rightMenuIsOpen = false;
 
-        [BoxGroup("Right Menu Settings")] [SerializeField] public ButtonBehavior rightMenuBackButton;
-        [BoxGroup("Right Menu Settings")] [SerializeField] public ButtonBehavior rightMenuResetRotationButton;
-        [BoxGroup("Right Menu Settings")] [SerializeField] public ButtonBehavior rightMenuRotatedButton;
+        [BoxGroup("Right Menu Settings")][SerializeField] public ButtonBehavior rightMenuBackButton;
+        [BoxGroup("Right Menu Settings")][SerializeField] public ButtonBehavior rightMenuResetRotationButton;
+        [BoxGroup("Right Menu Settings")][SerializeField] public ButtonBehavior rightMenuRotatedButton;
 
 
-        [BoxGroup("Bullet Point Menu Settings")] [SerializeField] private RectTransform bulletPointMenuRect;
-        [BoxGroup("Bullet Point Menu Settings")] [SerializeField] private CanvasGroup bulletPointMenuCanvasGroup;
-        [BoxGroup("Bullet Point Menu Settings")] [SerializeField] private Vector2 bulletPointMenuOpenSize = new Vector2(450f, 400);
-        [BoxGroup("Bullet Point Menu Settings")] [SerializeField] private Vector2 bulletPointMenuClosedSize = new Vector2(450f, -400f);
+        [BoxGroup("Bullet Point Menu Settings")][SerializeField] private RectTransform bulletPointMenuRect;
+        [BoxGroup("Bullet Point Menu Settings")][SerializeField] private CanvasGroup bulletPointMenuCanvasGroup;
+        [BoxGroup("Bullet Point Menu Settings")][SerializeField] private Vector2 bulletPointMenuOpenSize = new Vector2(450f, 400);
+        [BoxGroup("Bullet Point Menu Settings")][SerializeField] private Vector2 bulletPointMenuClosedSize = new Vector2(450f, -400f);
         [BoxGroup("Bullet Point Menu Settings")] private bool bulletPointMenuIsOpen = false;
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuHeadline;
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuSubHeadline;
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuText;
 
 
-        [BoxGroup("Tool Tip Settings")] [SerializeField] private RectTransform tooltipPanelRect;
-        [BoxGroup("Tool Tip Settings")] [SerializeField] private ThisOtherThing.UI.Shapes.Rectangle tooltipPanelShape;
+        [BoxGroup("Tool Tip Settings")][SerializeField] private RectTransform tooltipPanelRect;
+        [BoxGroup("Tool Tip Settings")][SerializeField] private ThisOtherThing.UI.Shapes.Rectangle tooltipPanelShape;
         [BoxGroup("Tool Tip Settings")] public TextMeshProUGUI tooltipText;
 
-        [BoxGroup("Tool Tip Settings/World Space Tool Tip")] [SerializeField] private RectTransform tooltip3DPanelRect;
-        [BoxGroup("Tool Tip Settings/World Space Tool Tip")] [SerializeField] private ThisOtherThing.UI.Shapes.Rectangle tooltip3DPanelShape;
+        [BoxGroup("Tool Tip Settings/World Space Tool Tip")][SerializeField] private RectTransform tooltip3DPanelRect;
+        [BoxGroup("Tool Tip Settings/World Space Tool Tip")][SerializeField] private ThisOtherThing.UI.Shapes.Rectangle tooltip3DPanelShape;
         [BoxGroup("Tool Tip Settings/World Space Tool Tip")] public TextMeshProUGUI tooltip3DPanelText;
 
         [BoxGroup("Tool Tip Settings")]
         [InfoBox("Tooltips are largly done, but Tooltip-Attributes are still very limited and not User-friendly. Keep that in mind!", InfoMessageType.Warning)]
 
-        [BoxGroup("Tool Tip Settings")] [SerializeField] public List<TooltipAttributes> tooltipAttributes = new List<TooltipAttributes>();
+        [BoxGroup("Tool Tip Settings")][SerializeField] public List<TooltipAttributes> tooltipAttributes = new List<TooltipAttributes>();
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private RectTransform timelineStepperRect;
-        [BoxGroup("Timeline Stepper")] [SerializeField] private Transform timelineStepperParent;
+        [BoxGroup("Timeline Stepper")][SerializeField] private RectTransform timelineStepperRect;
+        [BoxGroup("Timeline Stepper")][SerializeField] private Transform timelineStepperParent;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private Slider timelineStepperSlider;
+        [BoxGroup("Timeline Stepper")][SerializeField] private Slider timelineStepperSlider;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private RectTransform timelineStepperRightChevronRect;
-        [BoxGroup("Timeline Stepper")] [SerializeField] private RectTransform timelineStepperLeftChevronRect;
+        [BoxGroup("Timeline Stepper")][SerializeField] private RectTransform timelineStepperRightChevronRect;
+        [BoxGroup("Timeline Stepper")][SerializeField] private RectTransform timelineStepperLeftChevronRect;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private Sprite timelineStepperButtonSpriteClicked;
+        [BoxGroup("Timeline Stepper")][SerializeField] private Sprite timelineStepperButtonSpriteClicked;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private GameObject timelineStepPointPrefab;
-        [BoxGroup("Timeline Stepper")] [SerializeField] private GameObject timelineStepChevronPrefab;
+        [BoxGroup("Timeline Stepper")][SerializeField] private GameObject timelineStepPointPrefab;
+        [BoxGroup("Timeline Stepper")][SerializeField] private GameObject timelineStepChevronPrefab;
+        [BoxGroup("Timeline Stepper")][SerializeField] private GameObject timelineStepEndMarkerPrefab;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private Vector2 timelineStepperOpenPos = new Vector2(0f, -50f);
-        [BoxGroup("Timeline Stepper")] [SerializeField] private Vector2 timelineStepperClosedPos = new Vector2(0f, 100);
+        [BoxGroup("Timeline Stepper")][SerializeField] private Vector2 timelineStepperOpenPos = new Vector2(0f, -50f);
+        [BoxGroup("Timeline Stepper")][SerializeField] private Vector2 timelineStepperClosedPos = new Vector2(0f, 100);
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private bool timelineStepperIsOpen = false;
+        [BoxGroup("Timeline Stepper")][SerializeField] private bool timelineStepperIsOpen = false;
 
-        [BoxGroup("Timeline Stepper")] [SerializeField] private CanvasGroup blackFade;
-        [BoxGroup("Timeline Stepper")] [SerializeField] private bool usesBlackFade;
+        [BoxGroup("Timeline Stepper")][SerializeField] private CanvasGroup blackFade;
+        [BoxGroup("Timeline Stepper")][SerializeField] private bool usesBlackFade;
 
 
 
@@ -149,7 +153,7 @@ namespace Showroom
         void UpdateScreenSize()
         {
 
-            showroomUICanvasScaler.referenceResolution = new Vector2(1920, 1080) * scaleFactor.Evaluate(screenScaleValue);
+            showroomUICanvasScaler.referenceResolution = currentResolution * scaleFactor.Evaluate(screenScaleValue);
 
         }
 
@@ -158,7 +162,7 @@ namespace Showroom
 
             showroomManager = ShowroomManager.Instance;
 
-            currentResolution = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
+            currentResolution = new Vector2(Screen.width, Screen.height);
 
 
             if (!showroomManager.downloadFairtouchData || ShowroomSSPDataHandler.Instance == null)
@@ -168,25 +172,35 @@ namespace Showroom
 
                 UpdateUI();
 
+                //if (showroomManager.openSidebarMenu)
+                //    if (sidebarIsOpen)
+                //        sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
+                //            .SetDelay(0f)
+                //            .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
+                //    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+
                 if (showroomManager.openSidebarMenu)
                     if (sidebarIsOpen)
-                        sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
-                            .SetDelay(0f)
-                            .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
-                    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
-
-                Debug.Log("Test");
+                        sidebarRect.gameObject.GetComponent<CanvasGroup>().DOFade(1f, .01f);
+                    else
+                        sidebarRect.gameObject.GetComponent<CanvasGroup>().DOFade(0f, .01f);
 
             }
             else if (showroomManager.downloadFairtouchData)
             {
 
+                //if (showroomManager.openSidebarMenu)
+                //    if (sidebarIsOpen)
+                //        sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
+                //            .SetDelay(0f)
+                //            .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
+                //    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+
                 if (showroomManager.openSidebarMenu)
                     if (sidebarIsOpen)
-                        sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
-                            .SetDelay(0f)
-                            .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
-                    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+                        sidebarRect.gameObject.GetComponent<CanvasGroup>().DOFade(1f, .01f);
+                    else
+                        sidebarRect.gameObject.GetComponent<CanvasGroup>().DOFade(0f, .01f);
 
             }
 
@@ -257,6 +271,7 @@ namespace Showroom
                     int curIndex = tempButtons.IndexOf(showroomManager.useCases[i].useCaseButtons[j]);
 
                     GameObject newButton = Instantiate(sidebarButtonPrefab, sidebarButtonParent);
+                    Button newButtonButton = newButton.GetComponent<Button>();
                     ButtonBehavior newButtonBehavior = newButton.GetComponent<ButtonBehavior>();
                     TextMeshProUGUI newButtonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -265,7 +280,7 @@ namespace Showroom
                     spawnedButtons.Add(newButtonBehavior);
 
                     newButtonBehavior.onMouseDown.AddRange(tempButtons[curIndex].useCaseButtonFunctions);
-                    newButtonText.text = "     " + tempButtons[curIndex].useCaseButtonName;
+                    newButtonText.text = tempButtons[curIndex].useCaseButtonName;
                     newButton.name = "IndentedUseCaseButton_" + curIndex + "_" + i;
 
                     if (showroomManager.useCases[i].useCaseButtons[j].useCaseButtonSprite != null)
@@ -275,6 +290,19 @@ namespace Showroom
                     }
                     else
                         buttonIcon.gameObject.SetActive(false);
+
+
+                    ColorBlock cb = newButtonButton.colors;
+
+                    cb.normalColor = new Color32(0, 31, 57, 255);
+                    cb.selectedColor = new Color32(0, 31, 57, 255);
+                    cb.highlightedColor = new Color32(0, 31, 57, 255);
+                    cb.disabledColor = new Color32(0, 31, 57, 255);
+
+                    newButtonButton.colors = cb;
+
+                    newButton.transform.GetChild(1).gameObject.SetActive(false);
+                    newButton.transform.GetChild(2).gameObject.SetActive(false);
 
                     AddStandardButtonBehavior(newButtonBehavior, curIndex, i);
 
@@ -546,12 +574,16 @@ namespace Showroom
 
                 showroomManager.DisableDragMode();
 
-                Vector2 tempSidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + showroomManager.useCases[index].useCaseButtons.Count + 50f));
+                //Vector2 tempSidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + showroomManager.useCases[index].useCaseButtons.Count + 50f));
+                //
+                //if (showroomManager.openSidebarMenu)
+                //    sidebarRect.DOSizeDelta(tempSidebarOpenSize, .5f)
+                //    .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
+                //    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
 
-                if (showroomManager.openSidebarMenu)
-                    sidebarRect.DOSizeDelta(tempSidebarOpenSize, .5f)
-                    .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
-                    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+                LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+                LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+
 
                 showroomManager.isAtUseCaseHomePos = false;
                 showroomManager.MoveToFixedPos(-1);
@@ -1384,15 +1416,23 @@ namespace Showroom
 
                 sidebarIsOpen = true;
 
-                if (showroomManager.useCaseIndex == -1)
-                    sidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + 30f));// + tempButtons.Count));
-                else
-                    sidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + showroomManager.useCases[showroomManager.useCaseIndex].useCaseButtons.Count + 30f));
+                //if (showroomManager.useCaseIndex == -1)
+                //    sidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + 30f));// + tempButtons.Count));
+                //else
+                //    sidebarOpenSize = new Vector2(sidebarOpenSize.x, 55f * (tempHeadButtons.Count + showroomManager.useCases[showroomManager.useCaseIndex].useCaseButtons.Count));// + 30f));
+
+                //if (sidebarIsOpen && showroomManager.openSidebarMenu)
+                //    sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
+                //    .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
+                //    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
 
                 if (sidebarIsOpen && showroomManager.openSidebarMenu)
-                    sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
-                    .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
-                    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+                {
+
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+
+                }
 
             }
 
@@ -1613,10 +1653,18 @@ namespace Showroom
 
             }
 
+            //if (j == -1 && showroomManager.openSidebarMenu)
+            //    sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
+            //    .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
+            //        .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+
             if (j == -1 && showroomManager.openSidebarMenu)
-                sidebarRect.DOSizeDelta(sidebarOpenSize, .5f)
-                .OnStart(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent))
-                    .OnComplete(() => LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent));
+            {
+
+                LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+                LayoutRebuilder.ForceRebuildLayoutImmediate(sidebarButtonParent);
+
+            }
 
         }
 
@@ -1668,7 +1716,7 @@ namespace Showroom
             Vector2 newBulletPointMenuSize;
 
             newBulletPointMenuSize = bulletPointMenuOpenSize;
-            newBulletPointMenuSize.y = 50f;
+            newBulletPointMenuSize.y = 106f;
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(bulletPointMenuRect);
 
@@ -1841,9 +1889,9 @@ namespace Showroom
         public void MoveSidebarOffScreen()
         {
 
-            Vector2 offScreenPos = new Vector2(-500f, -50f);
+            //Vector2 offScreenPos = new Vector2(-500f, -50f);
 
-            sidebarParentRect.DOAnchorPos(offScreenPos, 1f);
+            sidebarParentRect.DOAnchorPos(sidebarClosePos, 1f);
 
             FadeCanvasGroupIn(burgerButtonOutsideCanvasGroup);
 
@@ -1886,9 +1934,9 @@ namespace Showroom
         public void MoveSidebarOntoScreen()
         {
 
-            Vector2 offScreenPos = new Vector2(50f, -50f);
+            //Vector2 offScreenPos = new Vector2(50f, -50f);
 
-            sidebarParentRect.DOAnchorPos(offScreenPos, 1f);
+            sidebarParentRect.DOAnchorPos(sidebarOpenPos, 1f);
 
             FadeCanvasGroupOut(burgerButtonOutsideCanvasGroup);
 
@@ -1916,18 +1964,14 @@ namespace Showroom
         public void MoveCloseButtonOffScreen()
         {
 
-            Vector2 offScreenPos = new Vector2(85f, -85f);
-
-            closeButtonRect.DOAnchorPos(offScreenPos, 1f);
+            closeButtonRect.DOAnchorPos(closeButtonOffScreenPos, 1f);
 
         }
 
         public void MoveCloseButtonOntoScreen()
         {
 
-            Vector2 offScreenPos = new Vector2(-85f, -85f);
-
-            closeButtonRect.DOAnchorPos(offScreenPos, 1f);
+            closeButtonRect.DOAnchorPos(closeButtonOnScreenPos, 1f);
 
         }
 
@@ -1991,7 +2035,7 @@ namespace Showroom
 
             Vector2 screenSpacePos = pos.position;
 
-            if (Mouse.current.position.ReadValue().x >= (currentResolution.x * .6f))
+            if (Mouse.current.position.ReadValue().x >= (currentResolution.x * .85f))
             {
 
                 tooltipPanelShape.RoundedProperties.BLRadius = 16f;
@@ -2000,8 +2044,8 @@ namespace Showroom
                 tooltipPanelShape.RoundedProperties.TRRadius = 0f;
 
 
-                if (Mouse.current.position.ReadValue().y >= (currentResolution.y * .6f))
-                    tooltipPanelRect.pivot = new Vector2(1.10f, 0.5f);
+                if (Mouse.current.position.ReadValue().y >= (currentResolution.y * .8f))
+                    tooltipPanelRect.pivot = new Vector2(1.375f, 0.5f);
                 else
                     tooltipPanelRect.pivot = new Vector2(1.12f, 0.5f);
 
@@ -2010,15 +2054,28 @@ namespace Showroom
             else
             {
 
-                tooltipPanelShape.RoundedProperties.BLRadius = 0f;
-                tooltipPanelShape.RoundedProperties.TLRadius = 16f;
-                tooltipPanelShape.RoundedProperties.BRRadius = 16f;
-                tooltipPanelShape.RoundedProperties.TRRadius = 16f;
-
                 if (onlyOneGeneralMenuButtonActive)
-                    tooltipPanelRect.pivot = new Vector2(0.05f, -0.86f);
+                {
+
+                    tooltipPanelRect.pivot = new Vector2(-0.11f, 0.5f);
+
+                    tooltipPanelShape.RoundedProperties.BLRadius = 0f;
+                    tooltipPanelShape.RoundedProperties.TLRadius = 0f;
+                    tooltipPanelShape.RoundedProperties.BRRadius = 16f;
+                    tooltipPanelShape.RoundedProperties.TRRadius = 16f;
+
+                }
                 else
-                    tooltipPanelRect.pivot = new Vector2(0.1f, -0.86f);
+                {
+
+                    tooltipPanelRect.pivot = new Vector2(0.5f, -0.86f);
+
+                    tooltipPanelShape.RoundedProperties.BLRadius = 16f;
+                    tooltipPanelShape.RoundedProperties.TLRadius = 16f;
+                    tooltipPanelShape.RoundedProperties.BRRadius = 16f;
+                    tooltipPanelShape.RoundedProperties.TRRadius = 16f;
+
+                }
 
                 screenSpacePos = new Vector2(screenSpacePos.x, screenSpacePos.y);
             }
@@ -2449,7 +2506,7 @@ namespace Showroom
 
                     //showroomManager.timelineSteps.Count
 
-                    timelineStepperSlider.maxValue = showroomManager.timelineSteps.Count - 1;
+                    timelineStepperSlider.maxValue = showroomManager.timelineSteps.Count;// - 1;
 
                     if (showroomManager.timelineSteps.Count > 5)
                     {
@@ -2659,6 +2716,8 @@ namespace Showroom
 
                     }
 
+                    GameObject timeLineStepperEndMarker = Instantiate(timelineStepEndMarkerPrefab, timelineStepperParent);
+
                 }
 
             }
@@ -2671,7 +2730,7 @@ namespace Showroom
                     if (showroomManager.showDebugMessages)
                         Debug.Log("Use Case has Timeline Stepper!" + showroomManager.useCaseIndex);
 
-                    timelineStepperSlider.maxValue = showroomManager.useCases[showroomManager.useCaseIndex].timelineSteps.Count - 1;
+                    timelineStepperSlider.maxValue = showroomManager.useCases[showroomManager.useCaseIndex].timelineSteps.Count; // - 1;
 
                     if (showroomManager.useCases[showroomManager.useCaseIndex].timelineSteps.Count > 5)
                     {
@@ -2881,6 +2940,8 @@ namespace Showroom
                             generalMenuPlayButton.OnMouseDown();
 
                     }
+
+                    GameObject timeLineStepperEndMarker = Instantiate(timelineStepEndMarkerPrefab, timelineStepperParent);
 
                 }
 

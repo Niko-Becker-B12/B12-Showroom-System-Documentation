@@ -991,7 +991,7 @@ namespace Showroom
             subLevelUI.MoveCloseButtonOffScreen();
             subLevelUI.MoveSidebarOffScreen();
             //subLevelUI.MoveGeneralMenuOffScreen();
-            subLevelUI.OpenTimelineStepper();
+            //subLevelUI.OpenTimelineStepper();
 
         }
 
