@@ -1964,7 +1964,7 @@ namespace Showroom
         public void MoveCloseButtonOffScreen()
         {
 
-            closeButtonRect.DOAnchorPos(closeButtonOffScreenPos, 1f);
+            //closeButtonRect.DOAnchorPos(closeButtonOffScreenPos, 1f);
 
         }
 
