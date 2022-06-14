@@ -32,6 +32,10 @@ namespace Showroom.WorldSpace
         private Quaternion q_now;
         private Quaternion q_drag;
 
+        Vector3 currentRot;
+
+        public bool onlyYAxis = false;
+
 
         void Start()
         {
@@ -154,11 +158,21 @@ namespace Showroom.WorldSpace
 
         private void Update()
         {
-            if(_dragged)
+            if (_dragged)
             {
 
                 q_now = q_drag * q_down;
-                Target.rotation = q_now;
+
+                if(!onlyYAxis)
+                    Target.rotation = q_now;
+                else
+                {
+                    currentRot = q_now.eulerAngles;
+
+                    currentRot = new Vector3(0f, currentRot.y, 0f);
+
+                    Target.eulerAngles = currentRot;
+                }
 
             }
 

@@ -86,6 +86,7 @@ namespace Showroom
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuHeadline;
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuSubHeadline;
         [BoxGroup("Bullet Point Menu Settings")] public TextMeshProUGUI bulletPointMenuText;
+        [BoxGroup("Bullet Point Menu Settings")] public CanvasGroup bulletPointMenuToggleButton;
 
 
         [BoxGroup("Tool Tip Settings")][SerializeField] private RectTransform tooltipPanelRect;
@@ -1713,14 +1714,9 @@ namespace Showroom
 
             bulletPointMenuIsOpen = true;
 
-            Vector2 newBulletPointMenuSize;
-
-            newBulletPointMenuSize = bulletPointMenuOpenSize;
-            newBulletPointMenuSize.y = 106f;
-
             LayoutRebuilder.ForceRebuildLayoutImmediate(bulletPointMenuRect);
 
-            bulletPointMenuRect.DOAnchorPos(newBulletPointMenuSize, 1f);
+            bulletPointMenuRect.DOAnchorPos(bulletPointMenuOpenSize, 1f);
 
         }
 
@@ -1735,12 +1731,7 @@ namespace Showroom
 
             bulletPointMenuIsOpen = false;
 
-            Vector2 newBulletPointMenuSize;
-
-            newBulletPointMenuSize = bulletPointMenuClosedSize;
-            newBulletPointMenuSize.y = -1200f;
-
-            bulletPointMenuRect.DOAnchorPos(newBulletPointMenuSize, 1f);
+            bulletPointMenuRect.DOAnchorPos(bulletPointMenuClosedSize, 1f);
 
         }
 
@@ -1754,7 +1745,12 @@ namespace Showroom
                 {
 
                     if (showroomManager.bulletPoints[index] == null)
+                    {
+
+                        FadeCanvasGroupOut(bulletPointMenuToggleButton);
+
                         return;
+                    }
 
                     if (bulletPointMenuIsOpen)
                     {
@@ -1772,7 +1768,12 @@ namespace Showroom
                 {
 
                     if (showroomManager.useCases[showroomManager.useCaseIndex].bulletPoints[index] == null)
+                    {
+
+                        FadeCanvasGroupOut(bulletPointMenuToggleButton);
+
                         return;
+                    }
 
                     if (bulletPointMenuIsOpen)
                     {
@@ -1842,6 +1843,7 @@ namespace Showroom
                 bulletPointMenuHeadline.transform.parent.gameObject.SetActive(false);
             }
 
+            FadeCanvasGroupIn(bulletPointMenuToggleButton);
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(bulletPointMenuRect);
 

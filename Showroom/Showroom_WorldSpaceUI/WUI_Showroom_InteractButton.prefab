@@ -251,6 +251,7 @@ MonoBehaviour:
   onButtonReset: []
   clickableOnce: 0
   wasClicked: 0
+  exceptionCase: 0
 --- !u!114 &1544357237472324999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +286,7 @@ GameObject:
   - component: {fileID: 1431695251513941294}
   - component: {fileID: 2415850387028904832}
   - component: {fileID: 3071027500850901314}
+  - component: {fileID: 4013840078670310794}
   m_Layer: 0
   m_Name: WUI_Showroom_InteractButton
   m_TagString: Untagged
@@ -393,3 +395,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 3895
+--- !u!114 &4013840078670310794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120566843211042855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639da12beb3455f4ca27e86b902106a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  invertFace: 1
+  upDirection: {x: 0, y: 1, z: 0}
+  rotateOnAllAxis: 1

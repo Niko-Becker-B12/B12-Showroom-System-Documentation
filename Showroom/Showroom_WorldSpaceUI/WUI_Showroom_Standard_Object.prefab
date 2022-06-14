@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4800132871889461416}
   - component: {fileID: 6700741623014349310}
   - component: {fileID: 9053264498207840073}
+  - component: {fileID: 6825321462527666731}
   m_Layer: 0
   m_Name: WUI_Showroom_Standard_Object
   m_TagString: Untagged
@@ -172,6 +173,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 3895
+--- !u!114 &6825321462527666731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5992667514009309336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639da12beb3455f4ca27e86b902106a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  invertFace: 1
+  upDirection: {x: 0, y: 1, z: 0}
+  rotateOnAllAxis: 1
 --- !u!1 &7348415075326609097
 GameObject:
   m_ObjectHideFlags: 0
